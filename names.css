@@ -1,0 +1,26 @@
+/*
+ * Eric Eckert CSE 154 AC
+ * Baby Names
+ * Style sheet for Baby names
+ */
+
+body {
+    font: Georgia, serif;
+    font-size: 12pt;
+}
+
+td {
+    height: 250px;
+    vertical-align: bottom;
+}
+
+.bar {
+    width: 50px;
+    background-color: #FFBBBB;
+    text-align: center;
+    font-weight: bold;
+}
+
+.top {
+    color: red;
+}

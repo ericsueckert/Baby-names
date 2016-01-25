@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <!--
+    Eric Eckert CSE 154 AC
+    Baby Names
+    -->
+
+    <head>
+        <title>Baby Names</title>
+        <!-- my files -->
+        <link href="names.css" type="text/css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="names.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <h1>
+            Baby Names
+            <span id="w3c">
+                <a href="https://webster.cs.washington.edu/validate-html.php"><img src="https://webster.cs.washington.edu/images/w3c-html.png" alt="Valid HTML" /></a>
+                <a href="https://webster.cs.washington.edu/validate-css.php"><img src="https://webster.cs.washington.edu/images/w3c-css.png" alt="Valid CSS" /></a>
+                <a href="https://webster.cs.washington.edu/jslint/?referer"><img src="https://webster.cs.washington.edu/images/w3c-js.png" alt="Valid JS" /></a>
+            </span>
+        </h1>
+
+        <div id="namearea">
+            <h2>First Name:</h2>
+
+            <div>
+                <select id="allnames" name="allnames" disabled="disabled">
+                    <option value="">(choose a name)</option>
+                </select>
+
+                <button id="search">
+                    <img src="https://webster.cs.washington.edu/images/babynames/pacifier.gif" alt="icon" />
+                    Search
+                </button>
+
+                <span id="loadingnames">
+                    <img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+                    Loading...
+                </span>
+            </div>
+
+            <div>
+                <label><input type="radio" id="genderm" name="gender" value="m" checked="checked" /> Male</label>
+                <label><input type="radio" id="genderf" name="gender" value="f" /> Female</label>
+            </div>
+        </div>
+
+        <div id="resultsarea" style="display: none;">
+            <div id="originmeaning">
+                <h2>Origin/Meaning:</h2>
+
+                <div class="loading" id="loadingmeaning">
+                    <img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+                    Searching...
+                </div>
+
+                <div id="meaning"></div>
+            </div>
+
+            <div id="grapharea">
+                <h2>Popularity:</h2>
+
+                <div class="loading" id="loadinggraph">
+                    <img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+                    Searching...
+                </div>
+
+                <div id="norankdata" style="display: none;">
+                    There is no ranking data for that name/gender combination.
+                </div>
+
+                <table id="graph"></table>
+            </div>
+
+            <div id="celebsarea">
+                <h2>Celebrities with This First Name:</h2>
+
+                <div class="loading" id="loadingcelebs">
+                    <img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+                    Searching...
+                </div>
+
+                <ul id="celebs"></ul>
+            </div>
+        </div>
+
+        <div id="errors"></div>
+    </body>
+</html>
